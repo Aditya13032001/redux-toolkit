@@ -1,10 +1,10 @@
-const createSLice = require("@reduxjs/toolkit").createSlice;
+const createSlice = require("@reduxjs/toolkit").createSlice;
 
 const initialState = {
   numOfIcecreams: 20,
 };
 
-const icecreamSLice = createSLice({
+const icecreamSlice = createSlice({
   name: "icecream",
   initialState,
   reducers: {
@@ -17,4 +17,5 @@ const icecreamSLice = createSLice({
   },
 });
 
-module.exports;
+module.exports = icecreamSlice.reducer;
+module.exports.icecreamActions = icecreamSlice.actions;
